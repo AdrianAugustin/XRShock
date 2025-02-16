@@ -26,7 +26,6 @@ namespace XRShock
         internal Leash leash;
         string address1 = "/avatar/parameters/RemotePressed";
         string address2 = "/avatar/parameters/thefunny";
-        float lastButtplugValue;
 
         public bool Repeating = true;
 
