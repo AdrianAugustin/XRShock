@@ -17,7 +17,7 @@ namespace ShockCollar.ViewModels
     public class ViewModel :BaseViewModel 
     {
 
-       static string ActiveButtonColor = "#FF6DEEFF";
+        static string ActiveButtonColor = "#FF6DEEFF";
         static string InactiveButtonColor = "#FFDDDDDD";
         public OSCConfigPage oscconfigWindow;
         public MainProgram mainProgram;
