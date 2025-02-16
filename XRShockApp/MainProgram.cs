@@ -116,8 +116,6 @@ namespace ShockCollar
         public static int VibratePower = 100;
         public static int ShockCooldown = 3000;
         public static int ShockPower = 10;
-        public static int BlinkCooldown = 0;
-        public static int BlinkPower = 100;
         public static int ToneCooldown = 0;
         public static int TonePower = 100;
         public static string PiShockName = "x";
@@ -131,7 +129,6 @@ namespace ShockCollar
             {
                 case CollarMode.Vibrate: return VibratePower;
                 case CollarMode.Shock: return ShockPower;
-                case CollarMode.Blink: return BlinkPower;
                 case CollarMode.Tone: return TonePower;
                 default: return 0;
             }
@@ -142,7 +139,6 @@ namespace ShockCollar
             {
                 case CollarMode.Vibrate: return VibrateCooldown;
                 case CollarMode.Shock: return ShockCooldown;
-                case CollarMode.Blink: return BlinkCooldown;
                 case CollarMode.Tone: return ToneCooldown;
                 default: return 0;
             }
@@ -153,7 +149,6 @@ namespace ShockCollar
             {
                 case CollarMode.Vibrate: VibratePower = newValue; break;
                 case CollarMode.Shock: ShockPower = newValue; break;
-                case CollarMode.Blink: BlinkPower = newValue; break;
                 case CollarMode.Tone: TonePower = newValue; break;
                 default: break;
             }
@@ -164,7 +159,6 @@ namespace ShockCollar
             {
                 case CollarMode.Vibrate: VibrateCooldown = newValue; break;
                 case CollarMode.Shock: ShockCooldown = newValue; break;
-                case CollarMode.Blink: BlinkCooldown = newValue; break;
                 case CollarMode.Tone: ToneCooldown = newValue; break;
                 default: break;
             }
@@ -187,16 +181,9 @@ namespace ShockCollar
         }
         public void ExecuteAction()
         {
-            //try { dildonicsClient.doDildonicsAction(); }
-            //catch (Exception ex)
-            //{
-            //}
-            oscAPI.aaroStart();//toDo
 
-            //if (arduinoAPI == null)
-            //{
-            //    return;
-            //}
+            oscAPI.aaroStart();
+
             switch (collarMode)
             {
                 case CollarMode.Tone:
@@ -218,12 +205,6 @@ namespace ShockCollar
                     if (arduinoAPI != null)
                     {
                         arduinoAPI.ExecuteCommand(collarMode, ShockPower, 1, MainProgram.ShockCooldown);
-                    }
-                    break;
-                case CollarMode.Blink:
-                    if (arduinoAPI != null)
-                    {
-                        arduinoAPI.ExecuteCommand(collarMode, BlinkPower, 1, MainProgram.BlinkCooldown);
                     }
                     break;
                 default: break;

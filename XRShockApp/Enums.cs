@@ -11,14 +11,12 @@ namespace ShockCollar
         Vibrate=1,
         Shock=2,
         Tone=3,
-        Blink=4
     }
     public enum ActionType
     {
         Vibrate = 1,
         Shock = 2,
         Tone = 3,
-        Blink = 4,
         UserChoice=5
     }
 }

@@ -15,8 +15,6 @@
             <ColumnDefinition Width="10" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="10" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="10" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="10" />
@@ -28,22 +26,10 @@
             <RowDefinition Height="10" />
         </Grid.RowDefinitions>
         <Button
-            x:Name="LED"
-            Grid.Row="1"
-            Grid.RowSpan="1"
-            Grid.Column="1"
-
-            HorizontalAlignment="Stretch"
-            VerticalAlignment="Stretch"
-            Background="{Binding LEDBackColor, UpdateSourceTrigger=PropertyChanged}"
-            BorderBrush="Black"
-            Command="{Binding BlinkCommand}"
-            Content="LED" />
-        <Button
             x:Name="Vibrate"
             Grid.Row="1"
             Grid.RowSpan="1"
-            Grid.Column="3"
+            Grid.Column="1"
 
       
                        HorizontalAlignment="Stretch"
@@ -56,7 +42,7 @@
             x:Name="Shock"
             Grid.Row="1"
             Grid.RowSpan="1"
-            Grid.Column="5"
+            Grid.Column="3"
 
          
                        HorizontalAlignment="Stretch"
@@ -69,7 +55,7 @@
             x:Name="Sound"
             Grid.Row="1"
             Grid.RowSpan="1"
-            Grid.Column="7"
+            Grid.Column="5"
 
           
                        HorizontalAlignment="Stretch"

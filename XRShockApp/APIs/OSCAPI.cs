@@ -12,8 +12,6 @@ namespace ShockCollar
 {
     public class OSCAPI
     {
-        //int repeaterPort1 = 9011;
-        //int repeaterPort2 = 9012;
         bool OSCReady = true;
         bool OSCRunning=false;
         int sendPort = 9000;
@@ -25,8 +23,6 @@ namespace ShockCollar
         UDPListener listener;
         Timer timer;
         SharpOSC.UDPSender sender;
-        SharpOSC.UDPSender senderRepeater1;
-        SharpOSC.UDPSender senderRepeater2;
         internal Leash leash;
         string address1 = "/avatar/parameters/RemotePressed";
         string address2 = "/avatar/parameters/thefunny";
@@ -34,19 +30,10 @@ namespace ShockCollar
 
         public bool Repeating = true;
 
-        //public OSCAPI(int Port, string Adress, MainProgram mainProgram)
-        //{
-        //    listenerport = Port;
-        //    address1 = Adress;
-
-        //    Start();
-        //}
-
         public OSCAPI(MainProgram mainProgram)
         {
             this.mainProgram = mainProgram;
             leash = new Leash(this);
-           // Start();
         }
 
         public void Stop()
@@ -127,14 +114,6 @@ namespace ShockCollar
                                 mainProgram.ExecuteAction();
                             }
                         }
-                        //else if (messageReceived.Address == "/avatar/parameters/ButtplugIO")
-                        //{
-                        //    if (lastButtplugValue!= (float)messageReceived.Arguments[0])
-                        //    {lastButtplugValue= (float)messageReceived.Arguments[0];
-                        //        mainProgram.dildonicsClient.doDildonicsAction((float)messageReceived.Arguments[0]);
-                        //       // mainProgram.ExecuteAction();
-                        //    }
-                        //}
                         else if (messageReceived.Address == "/avatar/parameters/XRVibrate")
                         {
                             if ((bool)messageReceived.Arguments[0])
@@ -176,9 +155,6 @@ namespace ShockCollar
         {
             if (OSCRunning)
             {
-                //var msg = new SharpOSC.OscMessage("/avatar/parameters/watchmode", 1);
-                //sender.Send(msg);
-
                 var msg1 = new SharpOSC.OscMessage("/avatar/parameters/allowaaromenu", true);
                 sender.Send(msg1);
 

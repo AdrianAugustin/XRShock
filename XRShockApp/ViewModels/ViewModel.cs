@@ -31,7 +31,6 @@ namespace ShockCollar.ViewModels
             _refreshSerialCommand = new DelegateCommand(RefreshSerial);
             _changeModeCommand = new DelegateCommand(ChangeMode);
             _shockCommand = new DelegateCommand(ShockMode);
-            _blinkCommand = new DelegateCommand(BlinkMode);
             _vibrateCommand= new DelegateCommand(VibrateMode);
             _toneCommand= new DelegateCommand(ToneMode);
             _openOSCSettingsCommand = new DelegateCommand(OpenOSCSettings);
@@ -134,16 +133,7 @@ namespace ShockCollar.ViewModels
             PowerLevelSlider = MainProgram.GetCurrentPowerLevel();
             CooldownSlider = MainProgram.GetCurrentCooldown();
         }
-        private void BlinkMode(object obj)
-        {
-            MainProgram.collarMode = CollarMode.Blink;
-            VibrateBackColor = InactiveButtonColor;
-            ShockBackColor = InactiveButtonColor;
-            LEDBackColor = ActiveButtonColor;
-            SoundBackColor = InactiveButtonColor;
-            PowerLevelSlider = MainProgram.GetCurrentPowerLevel();
-            CooldownSlider = MainProgram.GetCurrentCooldown();
-        }
+       
         public void OSCLeashChecked(object obj)
         {
             if (OSCLeashActiveChecked)
