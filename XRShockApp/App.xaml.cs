@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using Forms = System.Windows.Forms;
 
-namespace ShockCollar
+namespace XRShock
 {
 
     /// <summary>

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Timers;
 using ShockCollar.Modules;
 
-namespace ShockCollar
+namespace XRShock
 {
     public class OSCAPI
     {

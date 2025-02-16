@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShockCollar.ViewModels
+namespace XRShock.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged, INotifyCollectionChanged, INotifyDataErrorInfo
     {

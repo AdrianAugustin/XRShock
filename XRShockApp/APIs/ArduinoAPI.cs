@@ -12,7 +12,7 @@ using Microsoft.Win32;
 using SharpOSC;
 
 
-namespace ShockCollar
+namespace XRShock
 {
     public class ArduinoAPI
     {
