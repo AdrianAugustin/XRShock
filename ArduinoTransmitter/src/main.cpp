@@ -1,16 +1,16 @@
 #include <Arduino.h>
 #include <EEPROM.h>
-#define MAX_LEN_VER 16
+#define MAX_LEN_VER 32
 #define EEPROM_ADDR_DEVID  0
 #define EEPROM_ADDR_SIGNAL_REPEATS  4
-#define EEPROM_ADDR_VERSION  24
+#define EEPROM_ADDR_VERSION  8
 
 unsigned int DevID;
 unsigned int Repeats;
 char DevVer[MAX_LEN_VER+1];
 
 const int outputPin = 11;
-const byte numChars = 20;
+const byte numChars = 32;
 char receivedChars[numChars];
 char mode[12] ={0};
 char argument[16]={0};
@@ -117,9 +117,9 @@ void executeCommand(int cmdType) {
   ExecuteCommand(GeneratePayload(DevID, 0, cmdType, powerlevel), Repeats);
 }
 
-void handleVibrate() { executeCommand(2); }
-void handleShock() { executeCommand(1); }
-void handleTone() { executeCommand(3); }
+void handleVibrate() { executeCommand(2);Serial.println("Vibrating"); }
+void handleShock() { executeCommand(1); Serial.println("Shocking");}
+void handleBeep() { executeCommand(3); Serial.println("Beeping");}
 void handleVersion() { Serial.print("DeviceVersion="); Serial.println(DevVer); }
 void handleReps() { Serial.print("Repeats="); Serial.println(Repeats); }
 void handleDevID() { Serial.print("DeviceID="); Serial.println(DevID); }
@@ -149,7 +149,7 @@ struct Command {
 Command commands[] = {
   {"Vibrate", handleVibrate},
   {"Shock", handleShock},
-  {"Tone", handleTone},
+  {"Tone", handleBeep},
   {"Version", handleVersion},
   {"Reps", handleReps},
   {"DevID", handleDevID},

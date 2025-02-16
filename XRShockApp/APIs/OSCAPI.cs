@@ -1,4 +1,4 @@
-﻿using ShockCollar.ViewModels;
+﻿using XRShock.ViewModels;
 using SharpOSC;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
-using ShockCollar.Modules;
+using XRShock.Modules;
 
 namespace XRShock
 {
