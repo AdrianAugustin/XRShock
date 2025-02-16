@@ -1,0 +1,27 @@
+How to use:
+1:Connect the Transmitter to one of your USB Ports 
+2:Start the XRShock Application
+3:Transmitter COM Port should show a COM Port now, other wise wait a moment and press "Refresh".
+4:Press the Test Button to emit a Test-Signal and Pairing the Receiver.
+
+
+Pairing the Collar:
+Press the button on the Receiver until the LED blinks Green, the Receiver is now in pairing Mode(for approx. 10seconds).
+Now send a Signal with eiter the Remote or the Transmitter.
+The Receiver should now react to the Signal is now paired.
+
+Power Saving Function:
+If no signal is Received for 5 Minutes, the Device will go into a Standby Mode.
+
+Turning On:
+Shortly press the Power Button on the Receiver.
+
+Turning Off:
+If you want to Turn the Device off, you can press the Power Button on the Receiver.  
+
+
+Important: This is an Adult Toy, and should only be used on consenting Humans.
+
+DO NOT USE THIS PRODUCT AROUND YOUR NECK, FACE OR NEAR YOUR SPINE!
+
+More Info at: xrshock.net
