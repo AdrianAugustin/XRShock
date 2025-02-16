@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShockCollar.Structs
+namespace XRShock.Structs
 {
   public  class OSCListenerEntry
     {

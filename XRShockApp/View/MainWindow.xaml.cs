@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel;
 using System.Windows;
-using ShockCollar.ViewModels;
+using XRShock.ViewModels;
 
 
-namespace ShockCollar.View
+namespace XRShock.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

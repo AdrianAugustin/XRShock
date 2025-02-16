@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShockCollar.Modules
+namespace XRShock.Modules
 {
     internal class Leash
     {

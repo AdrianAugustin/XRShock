@@ -1,5 +1,5 @@
-﻿using ShockCollar.Modules;
-using ShockCollar.View;
+﻿using XRShock.Modules;
+using XRShock.View;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace ShockCollar.ViewModels
+namespace XRShock.ViewModels
 {
 
     public class ViewModel :BaseViewModel 
